@@ -2,30 +2,117 @@
 
 * {
     font-family: 'Avenir';
-    font-weight: normal;
-    font-style: normal;
+    // background-color: red;
 }
 
 
 
-.logo {
-    padding: 10px 0px;
-    width: 136px;
-}
+
 
 .header {
     padding: 0px $mobile-padding;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    height: 169px;
+    box-sizing: border-box;
+    &__logo {
+        margin: 12px 0px;
+    }
+    @include tablet {
+        padding: 0px $tablet-padding;
+        flex-direction: row;
+        height: 80px;
+        justify-content: space-between;
+    }
+    @include desktop {
+        padding: 0px $desktop-padding;
+    }
+}
 
+// Form inside header
+.form {
+    position: relative;
+    width: 100%;
+    @include tablet {
+        display: flex;
+        width: 60%;
+    }
+    @include desktop {
+        width: 48%;
+    }
     &__search {
         width: 100%;
-        height: 40px;
-        padding: 10px;
+        height: 48.5px;
+        padding: 10px 35px;
+        margin-bottom: 8px;
         box-sizing: border-box;
         border: 1px solid $mercury;
         border-radius: 5px;
         font-size: 14px;
+        @include tablet {
+            margin: 0;
+            // margin-right: 24px;
+            margin-right: 24px;
+            width: 65%;
+            padding: 10px 45px;
+        }
+        &-logo {
+            position: absolute;
+            left: 4%;
+            top: 10%;
+            @include tablet {
+                left: 4%;
+                top: 34%;   
+            }
+        }
+
+    }
+    &__upload {
+        display: flex;
+        justify-content: space-between;
+        @include tablet {
+            width: 182.5px;
+            justify-content: flex-end;
+        }
+        &-button {
+            background-color: $brainflix-blue;
+            color: $white;
+            border: none;
+            border-radius: 5px;
+            height: 48.5px;
+            width: 78%;
+            font-weight: 500;
+            font-style: normal; 
+            font-size: 15px;
+            margin-right: 5%;
+            padding-left: 13%;
+            @include tablet {
+                width: 110px;
+                padding-left: 15%;
+                margin-right: 24px;
+                box-sizing: border-box;
+            }
+        }
+        &-logo {
+            position: absolute;
+            left: 25%;
+            top: 69%;
+            @include tablet {
+                
+            
+            }
+        }
+    }
+    
+    &__profile {
+        min-width: 48.5px;
+        width: 48.5px;
+        height: 48.5px;
+        background-image: url(../../assets/Images/Mohan-muruge.jpg);
+        background-size: cover;
+        border-radius: 60%;
     }
 }
+
