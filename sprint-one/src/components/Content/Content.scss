@@ -1,0 +1,62 @@
+@import '../../partials/_global';
+
+* {
+    font-family: 'Avenir';
+    margin: 0;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2{
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+.title {
+    &__bar {
+        padding: 32px 0 40px 0;
+        margin: 0 $mobile-padding 0 $mobile-padding;
+    }
+    &__heading {
+        text-align: start;
+        padding-bottom: 16px;
+    }
+    &__publish {
+        display: flex;
+        padding-bottom: 32px;
+        &-publisher {
+            font-size: 16px;
+            font-weight: 500;
+            font-style: normal;
+            margin-right: 8px;
+        }
+        &-date {
+            font-size: 15px;
+            color: $silver;
+        }
+    }
+    &__data {
+        display: flex;
+        padding-bottom: 24px;
+        border-bottom: 1px solid $mercury;
+        &-views {
+            font-size: 15px;
+            margin-left: 8px;
+            margin-right: 24px;
+        }
+        &-likes {
+            font-size: 15px;
+            margin-left: 8px;
+        }
+    }
+    &__article {
+        font-size: 14px;
+        text-align: start;
+        padding-top: 24px;
+    }
+}

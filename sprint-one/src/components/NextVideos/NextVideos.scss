@@ -1,0 +1,47 @@
+@import '../../partials/_global';
+
+
+.videos {
+    display: flex;
+    flex-direction: column;
+    padding: 40px $mobile-padding 0 $mobile-padding;
+    &__title {
+        text-align: start;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 14px;
+        color: $silver;
+        padding-bottom: 40px;
+    }
+}
+
+.video__item {
+    display: flex;
+    background-color: $white;
+    padding-bottom: 24px;
+    // border: 1px solid black;
+    &-img {
+        width: 120px;
+        height: 70px;
+        border-radius: 5px;
+    }
+    &-info {
+        display: flex;
+        flex-direction: column;
+        padding-left: 16px;
+        &-title {
+            font-size: 13px;
+            font-weight: 500;
+            font-style: normal;  
+            text-align: start;
+            padding-bottom: 16px;
+        }
+        &-author {
+            font-size: 13px;
+            font-weight: 400;
+            font-style: normal; 
+            text-align: start;
+        }
+    }
+
+}
