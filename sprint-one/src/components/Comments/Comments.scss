@@ -1,7 +1,14 @@
 @import '../../partials/_global';
 
 .comments {
-    padding: 0 $mobile-padding 0 $mobile-padding;
+    margin: 0 $mobile-padding 0 $mobile-padding;
+    @include tablet {
+        margin: 0 $tablet-padding 0 $tablet-padding;
+    }
+    @include desktop {
+        margin: 0;
+        margin-right: 24px;
+    }
     &__title {
         text-align: start;
         font-weight: 500w;

@@ -6,7 +6,7 @@
 
 .video {
     background-color: black;
-    width: 100%;
+    // width: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -17,7 +17,9 @@
             width: 91%;
             margin-right: auto;
             margin-left: auto;
-        
+        }
+        @include desktop {
+            width: 65.6%;
         }
     }
     &__control-bar {
@@ -30,8 +32,11 @@
         padding: 0 $mobile-padding;
         box-sizing: border-box;
         @include tablet {
-            padding: 0 42px;
+            padding: 0 6%;
             bottom: 15px;
+        }
+        @include desktop {
+            padding: 0 19%;
         }
 
     }

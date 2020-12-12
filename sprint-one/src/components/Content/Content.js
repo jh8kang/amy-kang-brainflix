@@ -4,7 +4,6 @@ import likesLogo from '../../assets/Icons/SVG/likes.svg';
 
 
 
-let title = 'BMX Rampage: 2018 Highlights';
 let datePublished = '12/18/2018';
 let views = '1,001,023';
 let likes = '110,985';

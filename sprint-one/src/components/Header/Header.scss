@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    // width: 100%;
     height: 169px;
     box-sizing: border-box;
     &__logo {
@@ -73,33 +73,37 @@
             justify-content: flex-end;
         }
         &-button {
-            background-color: $brainflix-blue;
-            color: $white;
-            border: none;
-            border-radius: 5px;
-            height: 48.5px;
-            width: 78%;
-            font-weight: 500;
-            font-style: normal; 
-            font-size: 15px;
-            margin-right: 5%;
-            padding-left: 13%;
-            @include tablet {
-                width: 110px;
-                padding-left: 15%;
-                margin-right: 24px;
-                box-sizing: border-box;
+            width: 100%;
+            position: relative;
+            &-text {
+                background-color: $brainflix-blue;
+                color: $white;
+                border: none;
+                border-radius: 5px;
+                height: 48.5px;
+                width: 100%;
+                font-weight: 500;
+                font-style: normal; 
+                font-size: 15px;
+                padding-left: 13%;
+                @include tablet {
+                    width: 110px;
+                    padding-left: 30px;
+                    box-sizing: border-box;
+                }
             }
-        }
-        &-logo {
-            position: absolute;
-            left: 25%;
-            top: 69%;
-            @include tablet {
-                
+            &-logo {
+                position: absolute;
+                bottom: 18px;
+                left: 57px;
+                @include tablet {
+                    bottom: 17px;
+                    left: 12px;
+                }
+            }
             
-            }
         }
+        
     }
     
     &__profile {
@@ -109,6 +113,7 @@
         background-image: url(../../assets/Images/Mohan-muruge.jpg);
         background-size: cover;
         border-radius: 60%;
+        margin-left: 24px;
     }
 }
 

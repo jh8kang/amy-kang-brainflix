@@ -3,7 +3,23 @@
 .main {
     display: flex;
     flex-direction: column;
-
+    box-sizing: border-box;
+    
+    &__content {
+        @include desktop {
+            display: flex;
+            padding: 40px $desktop-padding;
+            box-sizing: border-box;
+        }
+        &-texts {
+            display: flex;
+            flex-direction: column;
+            @include desktop {
+                min-width: 588px;
+                width: 100%;
+            }
+        }
+    }
 }
 
 

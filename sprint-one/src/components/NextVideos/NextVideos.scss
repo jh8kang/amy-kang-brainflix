@@ -5,6 +5,12 @@
     display: flex;
     flex-direction: column;
     padding: 40px $mobile-padding 0 $mobile-padding;
+    @include tablet {
+        padding: 40px $tablet-padding 0 $tablet-padding;
+    }
+    @include desktop {
+        padding: 0;
+    }
     &__title {
         text-align: start;
         font-weight: 500;
@@ -29,12 +35,22 @@
         display: flex;
         flex-direction: column;
         padding-left: 16px;
+        @include tablet {
+            width: 23%;
+        }
+        @include desktop {
+            width: 100%;
+        }
         &-title {
             font-size: 13px;
             font-weight: 500;
             font-style: normal;  
             text-align: start;
             padding-bottom: 16px;
+            @include desktop {
+                width: 80%;
+            }
+            
         }
         &-author {
             font-size: 13px;

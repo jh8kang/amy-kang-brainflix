@@ -3,10 +3,6 @@ import './NextVideos.scss';
 
 
 function Video(props) {
-    // console.log(props)
-
-   
-
     return (
         <div className="video__item">
             <img className="video__item-img" alt="bike guy" src={props.source}></img>

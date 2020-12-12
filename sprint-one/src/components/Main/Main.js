@@ -33,9 +33,13 @@ class Main extends Component {
         return (
             <main className="main">
                 <MainVideo currentVideo = {this.state.currentVideo} />
-                <Content currentVideo ={this.state.currentVideo}/>
-                <Comments />
-                <NextVideos videoList={this.state.videoList}/>
+                <div class="main__content">
+                    <div className = "main__content-texts">
+                        <Content currentVideo ={this.state.currentVideo}/>
+                        <Comments />
+                    </div>
+                    <NextVideos videoList={this.state.videoList}/>
+                </div>
             </main>
         )
       }
