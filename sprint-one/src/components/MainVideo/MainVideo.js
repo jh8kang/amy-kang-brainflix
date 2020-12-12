@@ -14,6 +14,7 @@ function MainVideo(props) {
                 </div>
                 <div className="video__scrubby">
                     <div className="video__scrubby-bar"></div>
+                    <div className="video__scrubby-time">0:00 / 0:42</div>
                 </div>
                 <div className="video__control">
                     <img alt="fullscreen button"src={fullscreen} className="video__control-size"></img>

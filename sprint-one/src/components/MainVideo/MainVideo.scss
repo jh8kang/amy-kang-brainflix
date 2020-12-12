@@ -6,7 +6,6 @@
 
 .video {
     background-color: black;
-    // height: 50vw;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -14,6 +13,12 @@
 
     &__img {
         width: 100%;
+        @include tablet {
+            width: 91%;
+            margin-right: auto;
+            margin-left: auto;
+        
+        }
     }
     &__control-bar {
         display: flex;
@@ -22,10 +27,17 @@
         width: 100%;
         position: absolute;
         bottom: 10px;
+        padding: 0 $mobile-padding;
+        box-sizing: border-box;
+        @include tablet {
+            padding: 0 42px;
+            bottom: 15px;
+        }
 
     }
     &__play {
-        width: 15%;
+        min-width: 45px;
+        width: 45px;
         height: 30px;
         background-color: rgba(0, 0, 0, 0.5);
         display: flex;
@@ -33,21 +45,37 @@
         align-items: center;
         border: none;
         border-radius: 5px;
-        margin-left: $mobile-padding;
     }
+
     &__scrubby {
-        width: 60%;
+        width: 100%;
         height: 30px;
         background-color:  rgba(0, 0, 0, 0.5);
         margin: 0px 8px; 
         border: none;
         border-radius: 5px;
         display: flex;
-        justify-content: center;
+        padding: 0 13px;
+        @include tablet {
+            margin: 0px 16px; 
+            justify-content: space-between;
+        }
         &-bar {
-            width: 80%;
+            width: 100%;
             height: 50%;
             border-bottom: 3px solid black;
+        }
+        &-time {
+            display: none;
+            align-self: center;
+            color: $silver;
+            font-size: 11px;
+            margin-left: 16px;
+            width: 70px;
+            @include tablet {
+                display: flex;
+            }
+
         }
     }
     &__control {
@@ -55,12 +83,11 @@
         justify-content: space-around;
         align-items: center;
         background-color: rgba(0, 0, 0, 0.5);
-        width: 30%;
+        min-width: 75px;
         height: 30px;
-        padding: 0px 2%;
         border: none;
         border-radius: 5px;
         box-sizing: border-box;
-        margin-right: $mobile-padding;
+        padding: 0 10px;
     }
 }

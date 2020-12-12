@@ -1,6 +1,7 @@
 import './Main.scss';
 import MainVideo from '../MainVideo/MainVideo';
 import NextVideos from '../NextVideos/NextVideos';
+import Comments from '../Comments/Comments';
 import React, { Component } from 'react';
 import Content from '../Content/Content';
 import { v4 as uuid } from 'uuid';
@@ -33,6 +34,7 @@ class Main extends Component {
             <main className="main">
                 <MainVideo currentVideo = {this.state.currentVideo} />
                 <Content currentVideo ={this.state.currentVideo}/>
+                <Comments />
                 <NextVideos videoList={this.state.videoList}/>
             </main>
         )

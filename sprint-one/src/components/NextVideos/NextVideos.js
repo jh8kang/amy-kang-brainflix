@@ -24,7 +24,7 @@ function NextVideos(props) {
     return (
         <div className="videos">
             <div className="videos__title">NEXT VIDEO</div>
-            {props.videoList.map((video)=><Video key = {video.id} title={video.title}author={video.author} source={video.source}/>)}
+            {props.videoList.map((video)=><Video key = {video.id} title={video.title} author={video.author} source={video.source}/>)}
         </div>
     )
 }

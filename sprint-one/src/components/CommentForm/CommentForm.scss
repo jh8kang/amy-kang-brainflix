@@ -1,0 +1,45 @@
+@import '../../partials/_global';
+
+.comment-form {
+    display: flex;
+    padding: 32px 0 24px 0;
+    border-bottom: 1px solid $mercury;
+    &__profile {
+        width: 47px;
+        height: 47px;
+        background-image: url(../../assets/Images/Mohan-muruge.jpg);
+        background-size: cover;
+        margin-right: 16px;
+        border-radius: 50%;
+    }
+    &__input {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        &-label {
+            text-align: start;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 14px;
+            color: $silver;
+            padding-bottom: 8px;
+        }
+        &-comment {
+            height: 50px;
+            padding: 10px;
+            margin-bottom: 16px;
+        }
+        &-button {
+            background-color: $brainflix-blue;
+            color: $white;
+            border: none;
+            border-radius: 5px;
+            height: 48.5px;
+            font-weight: 500;
+            font-style: normal; 
+            font-size: 15px;
+        }
+    }
+    
+
+}
