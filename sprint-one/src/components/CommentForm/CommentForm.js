@@ -1,5 +1,4 @@
 import './CommentForm.scss';
-import profile from '../../assets/Images/Mohan-muruge.jpg';
 
 function CommentForm() {
     return (
