@@ -27,7 +27,7 @@ function Comment(props) {
     timeCalculator(props.timestamp)
     return (
         <div className="comment">
-            <img alt="grey background" className="comment__img"></img>
+            <div className="comment__img"></div>
             <div className="comment__data">
                 <div className="comment__data-info">
                     <p className="comment__data-info-name">{props.name}</p>

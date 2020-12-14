@@ -19,7 +19,7 @@ import v8 from '../../assets/Images/video-list-8.jpg';
 // Main Component contains currentVideo and videoList states 
 class Main extends Component {
     state = {
-        currentVideo: {id: uuid(), channel: "Red Cow", title: "BMX Rampage: 2018 HIghlights",source: v0},
+        currentVideo: {id: uuid(), channel: "Red Cow", title: "BMX Rampage: 2018 HIghlights",source: v0, likes: '110,985', views: '1,001,023', timestamp: '12/18/2018'},
         videoList: [
             {id: uuid(), channel: "Todd Welch", title:"Become A Tracel Pro In One Easy Lesson", source: v1},
             {id: uuid(), channel: "Cornelia Blair", title: "Les Houches The Hidden Gem Of tThe Chamonix", source: v2},
