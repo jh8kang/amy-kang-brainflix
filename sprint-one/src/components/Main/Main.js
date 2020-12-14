@@ -19,7 +19,16 @@ import v8 from '../../assets/Images/video-list-8.jpg';
 // Main Component contains currentVideo and videoList states 
 class Main extends Component {
     state = {
-        currentVideo: {id: uuid(), channel: "Red Cow", title: "BMX Rampage: 2018 HIghlights",source: v0, likes: '110,985', views: '1,001,023', timestamp: '12/18/2018'},
+        currentVideo: {
+            id: uuid(), 
+            channel: "Red Cow", 
+            title: "BMX Rampage: 2018 HIghlights",
+            source: v0, 
+            likes: '110,985', 
+            views: '1,001,023', 
+            timestamp: '12/18/2018', 
+            duration: "0:42",
+            description: 'On a gusty day in Southern Utah, a group of 25 daring mountain bikers blew the doors off what is possible on two wheels, unleashing some of the biggest moments the sport has ever seen. While mother nature only allowed for one full run before the conditions made it impossible to ride, that was all that was needed for event veteran Kyle Strait, who won the event for the second time --eight years after his first Red Cow Rampage title'},
         videoList: [
             {id: uuid(), channel: "Todd Welch", title:"Become A Tracel Pro In One Easy Lesson", source: v1},
             {id: uuid(), channel: "Cornelia Blair", title: "Les Houches The Hidden Gem Of tThe Chamonix", source: v2},
