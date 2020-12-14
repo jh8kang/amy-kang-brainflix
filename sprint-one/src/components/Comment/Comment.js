@@ -1,5 +1,6 @@
 import './Comment.scss';
 
+// timeCalculator takes in a string and returns a readable time string
 function timeCalculator(date) {
     let todayMonth = 12;
     let todayDay = 19;
@@ -10,22 +11,23 @@ function timeCalculator(date) {
 
     if (year < todayYear) {
         return `${todayYear - year} years ago`;
-    } else if (month == todayMonth - 1) {
+    } else if (month === todayMonth - 1) {
         return '1 month ago';
     } else if (month < todayMonth ) {
         return `${todayMonth - month} months ago`;
-    } else if (day == todayDay - 1) {
+    } else if (day === todayDay - 1) {
         return '1 day ago';
     } else if (day < todayDay) {
         return `${todayDay - day} days ago`;
     } 
 }
 
+// Comment component takes in props and returns JXN for a single comment 
 function Comment(props) {
     timeCalculator(props.timestamp)
     return (
         <div className="comment">
-            <img className="comment__img"></img>
+            <img alt="grey background" className="comment__img"></img>
             <div className="comment__data">
                 <div className="comment__data-info">
                     <p className="comment__data-info-name">{props.name}</p>

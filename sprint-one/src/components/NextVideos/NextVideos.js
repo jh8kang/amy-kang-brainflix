@@ -1,5 +1,6 @@
 import './NextVideos.scss';
 
+// Video takes in props and returns JSX 
 function Video(props) {
     let newMainVideo = {
         id: props.id,
@@ -9,7 +10,7 @@ function Video(props) {
     }
     return (
         <div className="video__item" onClick = {()=>props.clickHandler(newMainVideo)}>
-            <img className="video__item-img" alt="bike guy" id ={props.key} src={props.source}></img>
+            <img className="video__item-img" alt="bike guy" id ={props.id} src={props.source}></img>
             <div className="video__item-info">
                 <p className="video__item-info-title">{props.title}</p>
                 <p className="video__item-info-author">{props.channel}</p>
@@ -18,6 +19,7 @@ function Video(props) {
     )
 }
 
+// NextVideos takes in props and returns JSX for each video
 function NextVideos(props) {
     return (
         <div className="videos">

@@ -16,6 +16,7 @@ import v7 from '../../assets/Images/video-list-7.jpg';
 import v8 from '../../assets/Images/video-list-8.jpg';
 
 
+// Main Component contains currentVideo and videoList states 
 class Main extends Component {
     state = {
         currentVideo: {id: uuid(), channel: "Red Cow", title: "BMX Rampage: 2018 HIghlights",source: v0},
@@ -32,7 +33,7 @@ class Main extends Component {
       
 
       clickHandler = (e) => {
-        let newVideoList = this.state.videoList.filter(video => video.id != e.id);
+        let newVideoList = this.state.videoList.filter(video => video.id !== e.id);
         newVideoList.push(this.state.currentVideo);
 
         this.setState({
@@ -45,9 +46,9 @@ class Main extends Component {
         return (
             <main className="main">
                 <MainVideo currentVideo = {this.state.currentVideo} />
-                <div class="main__content">
+                <div className="main__content">
                     <div className = "main__content-texts">
-                        <Content currentVideo ={this.state.currentVideo}/>
+                        <Content currentVideo = {this.state.currentVideo}/>
                         <Comments />
                     </div>
                     <NextVideos videoList={this.state.videoList} clickHandler={this.clickHandler}/>
