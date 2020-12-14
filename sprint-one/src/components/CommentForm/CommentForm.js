@@ -7,7 +7,7 @@ function CommentForm() {
             <div className="comment-form__input">
                 <label for="commentInput" className="comment-form__input-label">JOIN THE CONVERSATION</label>
                 <div className="comment-form__input-box">
-                    <textarea className="comment-form__input-box-comment" id="commentInput" name="commentInput" placeholder="That was easily the most spectacular BMX moment ever."></textarea>
+                    <textarea className="comment-form__input-box-comment" id="commentInput" name="commentInput" placeholder="Place comment here"></textarea>
                     <button className="comment-form__input-box-button">COMMENT</button>
                 </div>
                 

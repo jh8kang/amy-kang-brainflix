@@ -3,7 +3,6 @@ import play from '../../assets/Icons/SVG/play.svg';
 import fullscreen from '../../assets/Icons/SVG/fullscreen.svg';
 import volume from '../../assets/Icons/SVG/volume.svg';
 
-
 function MainVideo(props) {
     return (
         <section className="video">

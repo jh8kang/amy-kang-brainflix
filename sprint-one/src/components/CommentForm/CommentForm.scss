@@ -14,6 +14,7 @@
         background-size: cover;
         margin-right: 16px;
         border-radius: 50%;
+        margin-top: 25px;
     }
     &__input {
         width: 80%;
@@ -38,7 +39,6 @@
             @include tablet {
                 flex-direction: row;
             }
-            
             &-comment {
                 height: 50px;
                 padding: 10px;
@@ -56,7 +56,7 @@
                 background-color: $brainflix-blue;
                 color: $white;
                 border: none;
-                border-radius: 5px;
+                border-radius: 4px;
                 height: 43px;
                 font-weight: 500;
                 font-style: normal; 
@@ -66,10 +66,7 @@
                     font-size: 13px;
                 }
             }
-        }
-        
+        } 
         
     }
-    
-
 }

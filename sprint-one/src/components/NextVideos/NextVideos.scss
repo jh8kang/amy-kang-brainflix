@@ -1,6 +1,5 @@
 @import '../../partials/_global';
 
-
 .videos {
     display: flex;
     flex-direction: column;
@@ -10,6 +9,7 @@
     }
     @include desktop {
         padding: 0;
+        margin-top: 40px;
     }
     &__title {
         text-align: start;
@@ -29,14 +29,15 @@
     &-img {
         width: 120px;
         height: 70px;
-        border-radius: 5px;
+        border-radius: 4px;
     }
     &-info {
         display: flex;
         flex-direction: column;
         padding-left: 16px;
         @include tablet {
-            width: 23%;
+            width: 26%;
+            justify-content: space-between;
         }
         @include desktop {
             width: 100%;
@@ -46,18 +47,24 @@
             font-weight: 500;
             font-style: normal;  
             text-align: start;
-            padding-bottom: 16px;
-            @include desktop {
-                width: 80%;
+            padding-bottom: 6%;
+            @include tablet {
+                font-size: 15px;
             }
-            
+            @include desktop {
+                width: 100%;
+                font-size: 14px;
+            }
         }
         &-author {
             font-size: 13px;
             font-weight: 400;
             font-style: normal; 
             text-align: start;
+            @include tablet {
+                font-size: 14px;
+                padding-bottom: 5px;
+            }
         }
     }
-
 }

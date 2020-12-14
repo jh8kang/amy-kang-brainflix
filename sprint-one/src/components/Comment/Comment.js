@@ -1,11 +1,36 @@
 import './Comment.scss';
 
+function timeCalculator(date) {
+    let todayMonth = 12;
+    let todayDay = 19;
+    let todayYear = 2018;
+    let month = Number(date.slice(0, 2));
+    let day = Number(date.slice(3, 5));
+    let year = Number(date.slice(6));
+
+    if (year < todayYear) {
+        return `${todayYear - year} years ago`;
+    } else if (month == todayMonth - 1) {
+        return '1 month ago';
+    } else if (month < todayMonth ) {
+        return `${todayMonth - month} months ago`;
+    } else if (day == todayDay - 1) {
+        return '1 day ago';
+    } else if (day < todayDay) {
+        return `${todayDay - day} days ago`;
+    } 
+}
+
 function Comment(props) {
+    timeCalculator(props.timestamp)
     return (
         <div className="comment">
             <img className="comment__img"></img>
             <div className="comment__data">
-                <p className="comment__data-name">{props.name}</p>
+                <div className="comment__data-info">
+                    <p className="comment__data-info-name">{props.name}</p>
+                    <p className="comment__data-info-time">{timeCalculator(props.timestamp)}</p>
+                </div>
                 <p className="comment__data-comment">{props.comment}</p>
             </div>
         </div>

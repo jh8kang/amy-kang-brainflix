@@ -3,7 +3,6 @@ import logo from '../../assets/logo/logo.svg';
 import search from '../../assets/Icons/SVG/search.svg';
 import upload from '../../assets/Icons/SVG/upload.svg';
 
-
 function Header() {
   return (
     <header className="header">
@@ -12,12 +11,10 @@ function Header() {
           <input type="text" className = "form__search" placeholder ="Search"></input>
           <img alt="magnifier"src={search} className ="form__search-logo"></img>
           <div className="form__upload">
-
             <div className="form__upload-button">
               <button type="submit" className = "form__upload-button-text">UPLOAD</button>
               <img alt="plus"src={upload} className ="form__upload-button-logo"></img>
             </div>
-            
             <div alt="profile picture" className="form__profile"></div>
           </div>
         </form>

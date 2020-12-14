@@ -1,12 +1,10 @@
 import './NextVideos.scss';
-// import React, { Component } from 'react';
-
 
 function Video(props) {
     let newMainVideo = {
         id: props.id,
         title: props.title, 
-        author: props.author,
+        channel: props.channel,
         source: props.source
     }
     return (
@@ -14,7 +12,7 @@ function Video(props) {
             <img className="video__item-img" alt="bike guy" id ={props.key} src={props.source}></img>
             <div className="video__item-info">
                 <p className="video__item-info-title">{props.title}</p>
-                <p className="video__item-info-author">{props.author}</p>
+                <p className="video__item-info-author">{props.channel}</p>
             </div>
         </div>
     )
@@ -24,7 +22,7 @@ function NextVideos(props) {
     return (
         <div className="videos">
             <div className="videos__title">NEXT VIDEO</div>
-            {props.videoList.map((video)=><Video clickHandler = {props.clickHandler} key={video.id} id={video.id} title={video.title} author={video.author} source={video.source}/>)}
+            {props.videoList.map((video)=><Video clickHandler = {props.clickHandler} key={video.id} id={video.id} title={video.title} channel={video.channel} source={video.source}/>)}
         </div>
     )
 }

@@ -18,16 +18,16 @@ import v8 from '../../assets/Images/video-list-8.jpg';
 
 class Main extends Component {
     state = {
-        currentVideo: {id: uuid(), author: "Red Cow", title: "BMX Rampage: 2018 HIghlights",source: v0},
+        currentVideo: {id: uuid(), channel: "Red Cow", title: "BMX Rampage: 2018 HIghlights",source: v0},
         videoList: [
-            {id: uuid(),author: "Todd Welch", title:"Become A Tracel Pro In One Easy Lesson", source: v1},
-            {id: uuid(),author: "Cornelia Blair", title: "Les Houches The Hidden Gem Of tThe Chamonix", source: v2},
-            {id: uuid(),author: "Glen Harper", title: "Travel Health Useful Medical Information For", source: v3},
-            {id: uuid(),author: "Emily Harper", title: "Cheap Airline Tickets Great Ways To Save", source: v4},
-            {id: uuid(),author: "Ethan Owen", title: "Take A Romantic Break In A Boutique Hotel", source: v5},
-            {id: uuid(),author: "Lydia Perez", title: "Choose The Perfect Accommodations", source: v6},
-            {id: uuid(),author: "Timothy Austin", title: "Cruising Destination Ideas", source: v7},
-            {id: uuid(),author: "Scotty Cranmer", title: "Train Travel On Track For Safety", source: v8}],
+            {id: uuid(), channel: "Todd Welch", title:"Become A Tracel Pro In One Easy Lesson", source: v1},
+            {id: uuid(), channel: "Cornelia Blair", title: "Les Houches The Hidden Gem Of tThe Chamonix", source: v2},
+            {id: uuid(), channel: "Glen Harper", title: "Travel Health Useful Medical Information For", source: v3},
+            {id: uuid(), channel: "Emily Harper", title: "Cheap Airline Tickets Great Ways To Save", source: v4},
+            {id: uuid(), channel: "Ethan Owen", title: "Take A Romantic Break In A Boutique Hotel", source: v5},
+            {id: uuid(), channel: "Lydia Perez", title: "Choose The Perfect Accommodations", source: v6},
+            {id: uuid(), channel: "Timothy Austin", title: "Cruising Destination Ideas", source: v7},
+            {id: uuid(), channel: "Scotty Cranmer", title: "Train Travel On Track For Safety", source: v8}],
       }
       
 
@@ -37,7 +37,7 @@ class Main extends Component {
 
         this.setState({
             videoList: newVideoList, 
-             currentVideo: {id: e.id, author: e.author, title: e.title, source: e.source},
+             currentVideo: {id: e.id, channel: e.channel, title: e.title, source: e.source},
          });
       }
 
