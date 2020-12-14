@@ -31,7 +31,7 @@ class Main extends Component {
             description: 'On a gusty day in Southern Utah, a group of 25 daring mountain bikers blew the doors off what is possible on two wheels, unleashing some of the biggest moments the sport has ever seen. While mother nature only allowed for one full run before the conditions made it impossible to ride, that was all that was needed for event veteran Kyle Strait, who won the event for the second time --eight years after his first Red Cow Rampage title'},
         videoList: [
             {id: uuid(), channel: "Todd Welch", title:"Become A Tracel Pro In One Easy Lesson", source: v1},
-            {id: uuid(), channel: "Cornelia Blair", title: "Les Houches The Hidden Gem Of tThe Chamonix", source: v2},
+            {id: uuid(), channel: "Cornelia Blair", title: "Les Houches The Hidden Gem Of The Chamonix", source: v2},
             {id: uuid(), channel: "Glen Harper", title: "Travel Health Useful Medical Information For", source: v3},
             {id: uuid(), channel: "Emily Harper", title: "Cheap Airline Tickets Great Ways To Save", source: v4},
             {id: uuid(), channel: "Ethan Owen", title: "Take A Romantic Break In A Boutique Hotel", source: v5},
