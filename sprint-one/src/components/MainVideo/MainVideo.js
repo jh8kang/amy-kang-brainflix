@@ -6,7 +6,7 @@ import volume from '../../assets/Icons/SVG/volume.svg';
 function MainVideo(props) {
     return (
         <section className="video">
-            <video className ="video__img" poster={props.currentVideo.source}></video>
+            <video className ="video__img" poster={props.currentVideo.image}></video>
             <div className="video__control-bar">
                 <div className ="video__play">
                     <img alt="play button" className ="video__play-btn"src={play}></img>

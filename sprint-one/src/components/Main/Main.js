@@ -23,22 +23,22 @@ class Main extends Component {
             id: uuid(), 
             channel: "Red Cow", 
             title: "BMX Rampage: 2018 HIghlights",
-            source: v0, 
+            image: v0, 
             likes: '110,985', 
             views: '1,001,023', 
             timestamp: '12/18/2018', 
             duration: "0:42",
             description: 'On a gusty day in Southern Utah, a group of 25 daring mountain bikers blew the doors off what is possible on two wheels, unleashing some of the biggest moments the sport has ever seen. While mother nature only allowed for one full run before the conditions made it impossible to ride, that was all that was needed for event veteran Kyle Strait, who won the event for the second time --eight years after his first Red Cow Rampage title'},
         videoList: [
-            {id: uuid(), channel: "Todd Welch", title:"Become A Tracel Pro In One Easy Lesson", source: v1},
-            {id: uuid(), channel: "Cornelia Blair", title: "Les Houches The Hidden Gem Of The Chamonix", source: v2},
-            {id: uuid(), channel: "Glen Harper", title: "Travel Health Useful Medical Information For", source: v3},
-            {id: uuid(), channel: "Emily Harper", title: "Cheap Airline Tickets Great Ways To Save", source: v4},
-            {id: uuid(), channel: "Ethan Owen", title: "Take A Romantic Break In A Boutique Hotel", source: v5},
-            {id: uuid(), channel: "Lydia Perez", title: "Choose The Perfect Accommodations", source: v6},
-            {id: uuid(), channel: "Timothy Austin", title: "Cruising Destination Ideas", source: v7},
-            {id: uuid(), channel: "Scotty Cranmer", title: "Train Travel On Track For Safety", source: v8}],
-      }
+            {id: uuid(), channel: "Todd Welch", title:"Become A Tracel Pro In One Easy Lesson", image: v1},
+            {id: uuid(), channel: "Cornelia Blair", title: "Les Houches The Hidden Gem Of The Chamonix", image: v2},
+            {id: uuid(), channel: "Glen Harper", title: "Travel Health Useful Medical Information For", image: v3},
+            {id: uuid(), channel: "Emily Harper", title: "Cheap Airline Tickets Great Ways To Save", image: v4},
+            {id: uuid(), channel: "Ethan Owen", title: "Take A Romantic Break In A Boutique Hotel", image: v5},
+            {id: uuid(), channel: "Lydia Perez", title: "Choose The Perfect Accommodations", image: v6},
+            {id: uuid(), channel: "Timothy Austin", title: "Cruising Destination Ideas", image: v7},
+            {id: uuid(), channel: "Scotty Cranmer", title: "Train Travel On Track For Safety", image: v8}],
+      } 
       
 
       clickHandler = (e) => {
@@ -47,7 +47,7 @@ class Main extends Component {
 
         this.setState({
             videoList: newVideoList, 
-             currentVideo: {id: e.id, channel: e.channel, title: e.title, source: e.source},
+             currentVideo: {id: e.id, channel: e.channel, title: e.title, image: e.image},
          });
       }
 
