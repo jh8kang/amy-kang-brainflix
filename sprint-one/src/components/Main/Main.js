@@ -30,14 +30,14 @@ class Main extends Component {
             duration: "0:42",
             description: 'On a gusty day in Southern Utah, a group of 25 daring mountain bikers blew the doors off what is possible on two wheels, unleashing some of the biggest moments the sport has ever seen. While mother nature only allowed for one full run before the conditions made it impossible to ride, that was all that was needed for event veteran Kyle Strait, who won the event for the second time --eight years after his first Red Cow Rampage title'},
         videoList: [
-            {id: uuid(), channel: "Todd Welch", title:"Become A Tracel Pro In One Easy Lesson", image: v1},
-            {id: uuid(), channel: "Cornelia Blair", title: "Les Houches The Hidden Gem Of The Chamonix", image: v2},
-            {id: uuid(), channel: "Glen Harper", title: "Travel Health Useful Medical Information For", image: v3},
-            {id: uuid(), channel: "Emily Harper", title: "Cheap Airline Tickets Great Ways To Save", image: v4},
-            {id: uuid(), channel: "Ethan Owen", title: "Take A Romantic Break In A Boutique Hotel", image: v5},
-            {id: uuid(), channel: "Lydia Perez", title: "Choose The Perfect Accommodations", image: v6},
-            {id: uuid(), channel: "Timothy Austin", title: "Cruising Destination Ideas", image: v7},
-            {id: uuid(), channel: "Scotty Cranmer", title: "Train Travel On Track For Safety", image: v8}],
+            {id: uuid(), channel: "Todd Welch", description: "No description yet", title:"Become A Tracel Pro In One Easy Lesson", image: v1},
+            {id: uuid(), channel: "Cornelia Blair", description: "No description yet", title: "Les Houches The Hidden Gem Of The Chamonix", image: v2},
+            {id: uuid(), channel: "Glen Harper", description: "No description yet", title: "Travel Health Useful Medical Information For", image: v3},
+            {id: uuid(), channel: "Emily Harper", description: "No description yet", title: "Cheap Airline Tickets Great Ways To Save", image: v4},
+            {id: uuid(), channel: "Ethan Owen", description: "No description yet", title: "Take A Romantic Break In A Boutique Hotel", image: v5},
+            {id: uuid(), channel: "Lydia Perez", description: "No description yet", title: "Choose The Perfect Accommodations", image: v6},
+            {id: uuid(), channel: "Timothy Austin", description: "No description yet", title: "Cruising Destination Ideas", image: v7},
+            {id: uuid(), channel: "Scotty Cranmer", description: "No description yet", title: "Train Travel On Track For Safety", image: v8}],
       } 
       
 
@@ -47,7 +47,7 @@ class Main extends Component {
 
         this.setState({
             videoList: newVideoList, 
-             currentVideo: {id: e.id, channel: e.channel, title: e.title, image: e.image},
+             currentVideo: {id: e.id, channel: e.channel, title: e.title, image: e.image, description: e.description},
          });
       }
 

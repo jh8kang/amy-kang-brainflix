@@ -6,7 +6,8 @@ function Video(props) {
         id: props.id,
         title: props.title, 
         channel: props.channel,
-        image: props.image
+        image: props.image,
+        description: props.description
     }
     return (
         <div className="video__item" onClick = {()=>props.clickHandler(newMainVideo)}>
@@ -24,7 +25,7 @@ function NextVideos(props) {
     return (
         <div className="videos">
             <div className="videos__title">NEXT VIDEO</div>
-            {props.videoList.map((video)=><Video clickHandler = {props.clickHandler} key={video.id} id={video.id} title={video.title} channel={video.channel} image={video.image}/>)}
+            {props.videoList.map((video)=><Video clickHandler = {props.clickHandler} key={video.id} id={video.id} title={video.title} channel={video.channel} image={video.image} description={video.description}/>)}
         </div>
     )
 }
