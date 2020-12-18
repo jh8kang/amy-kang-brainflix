@@ -1,0 +1,33 @@
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content; 
+    }
+}
+
+@mixin tablet-landscape {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin footer-text {
+        padding: 10px 0px;
+        color: $alabaster;
+        font-weight: normal;
+        font-style: normal;
+};
+
+@mixin silver-sub {
+    font-weight:600;
+    font-style: normal;
+    // font-size: 13px;
+    color: $silver;
+};
+
+

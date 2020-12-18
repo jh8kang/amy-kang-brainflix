@@ -1,0 +1,83 @@
+@import '../../partials/_global';
+
+.title {
+    &__bar {
+        padding: 32px 0 40px 0;
+        margin: 0 $mobile-padding 0 $mobile-padding;
+        @include tablet {
+            padding: 48px 0 64px 0;
+            margin: 0 $tablet-padding 0 $tablet-padding;
+        }
+        @include desktop {
+            padding: 0;
+            margin: 0;
+            padding-bottom: 64px;
+        }
+    }
+    &__heading {
+        text-align: start;
+        padding-bottom: 16px;
+        @include tablet {
+            padding-bottom: 24px;
+        }
+    }
+    &__info-bar {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid $mercury;
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            padding-bottom: 24px;
+        }
+        @include desktop {
+            // margin-right: 24px;
+        }
+    }
+    &__publish {
+        display: flex;
+        padding-bottom: 32px;
+        @include tablet {
+            padding-bottom: 0;
+        }
+        &-publisher {
+            font-size: 16px;
+            font-weight: 500;
+            font-style: normal;
+            margin-right: 8px;
+        }
+        &-date {
+            font-size: 15px;
+            color: $silver;
+        }
+    }
+    &__data {
+        display: flex;
+        padding-bottom: 24px;
+        @include tablet {
+            padding-bottom: 0;
+        }
+        &-views {
+            font-size: 15px;
+            margin-left: 8px;
+            margin-right: 24px;
+        }
+        &-likes {
+            font-size: 15px;
+            margin-left: 8px;
+            @include desktop {
+                padding-right: 32px;
+            }
+        }
+    }
+    &__article {
+        font-size: 14px;
+        text-align: start;
+        padding-top: 24px;
+        line-height: 22px;
+        @include tablet {
+            padding-top: 40px;
+            width: 75%;
+        }
+    }
+}
