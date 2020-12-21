@@ -1,4 +1,5 @@
 import './Comment.scss';
+import {realTimeFunc} from '../../modules/realTimeFunc';
 
 // timeCalculator takes in a string and returns a readable time string
 // function timeCalculator(date) {
@@ -24,13 +25,15 @@ import './Comment.scss';
 
 // Comment component takes in props and returns JXN for a single comment 
 function Comment({name, timestamp, comment, id}) {
+    let time = realTimeFunc(timestamp);
+    // console.log(time)
     return (
         <div className="comment" key={id} >
             <div className="comment__img"></div>
             <div className="comment__data">
                 <div className="comment__data-info">
                     <p className="comment__data-info-name">{name}</p>
-                    <p className="comment__data-info-time">{timestamp}</p>
+                    <p className="comment__data-info-time">{time}</p>
                 </div>
                 <p className="comment__data-comment">{comment}</p>
             </div>

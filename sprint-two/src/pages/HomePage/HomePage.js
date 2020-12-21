@@ -3,6 +3,8 @@ import Main from '../../components/Main/Main';
 import './HomePage.scss';
 import axios from 'axios'
 // import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import {realTimeFunc} from '../../modules/realTimeFunc';
+
 
 
 
@@ -26,40 +28,39 @@ class HomePage extends Component {
       componentDidMount() {
         axios.get(url + apiKey)
         .then(res => {
+            // console.log(res.data)
             this.setState({
                 videoList: res.data,
             })
         })
         axios.get(url + firstVideoId + apiKey)
         .then(res=> {
+            // console.log(res.data)
             this.setState({
                 currentVideo: res.data
             })
         })
-
     }
 
-    getNewComments(currentVideoId) {
-        axios.get(url + currentVideoId + apiKey)
-        .then(res => {
-            console.log(res.data.comments)
-
-        })
-
-    }
     submitHandler(e, currentVideoId) {
         e.preventDefault();
         let newComment = {
             name: "no one",
             comment: e.target.commentInput.value
         }
+
         axios.post((url + currentVideoId + '/comments' + apiKey), newComment)
-        this.getNewComments(currentVideoId)
 
-        
+        let currentVideoState = this.state.currentVideo;
+        let newVideoComments = this.state.currentVideo.comments; 
+        newVideoComments.push(newComment)
+        currentVideoState.comments = newVideoComments;
+        this.setState({
+            currentVideo: currentVideoState,
+        })
 
-        
-
+        let commentForm = document.querySelector('.comment-form');
+        commentForm.reset();
     }
     
 

@@ -4,6 +4,8 @@ import fullscreen from '../../assets/Icons/SVG/fullscreen.svg';
 import volume from '../../assets/Icons/SVG/volume.svg';
 
 function MainVideo(props) {
+    
+    
     return (
         <section className="video">
             <video className ="video__img" poster={props.currentVideo.image}></video>
