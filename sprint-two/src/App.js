@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
-// import HomePage from './pages/HomePage/HomePage';
+import HomePage from './pages/HomePage/HomePage';
 import UploadPage from './pages/UploadPage/UploadPage'
 import Header from './components/Header/Header';
-import Main from './components/Main/Main'
+// import Main from './components/Main/Main'
 
 
 
@@ -15,9 +15,9 @@ class App extends Component {
         <BrowserRouter>
         <Header />
           <Switch>
-            <Route path="/" exact component={()=><Main/>}/>
+            <Route path="/" exact component={(routerProps)=><HomePage {...routerProps}/>}/>
             <Route path="/upload" exact component={UploadPage}/>
-            <Route path="/:videoId" component={(routerProps)=><Main {...routerProps}/>}/>
+            <Route path={`/:videoId`} component={(routerProps)=><HomePage {...routerProps} />}/>
             
           </Switch>
         </BrowserRouter>

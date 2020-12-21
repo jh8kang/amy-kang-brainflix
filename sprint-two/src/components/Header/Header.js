@@ -8,7 +8,7 @@ function Header() {
   return (
     <header className="header">
         <Link to="/">
-          <img alt="logo" src={logo} className="header__logo" alt="logo" />
+          <img alt="logo" src={logo} className="header__logo" />
         </Link>
         <form className = "form">
           <input type="text" className = "form__search" placeholder ="Search"></input>

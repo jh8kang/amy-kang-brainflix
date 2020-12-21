@@ -23,17 +23,16 @@ import './Comment.scss';
 // }
 
 // Comment component takes in props and returns JXN for a single comment 
-function Comment(props) {
-    // console.log(props.id)
+function Comment({name, timestamp, comment, id}) {
     return (
-        <div className="comment" >
+        <div className="comment" key={id} >
             <div className="comment__img"></div>
             <div className="comment__data">
                 <div className="comment__data-info">
-                    <p className="comment__data-info-name">{props.name}</p>
-                    <p className="comment__data-info-time">{props.timestamp}</p>
+                    <p className="comment__data-info-name">{name}</p>
+                    <p className="comment__data-info-time">{timestamp}</p>
                 </div>
-                <p className="comment__data-comment">{props.comment}</p>
+                <p className="comment__data-comment">{comment}</p>
             </div>
         </div>
     )
