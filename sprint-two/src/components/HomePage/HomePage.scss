@@ -1,0 +1,46 @@
+@import '../../partials/_global.scss';
+
+* {
+    font-family: 'Avenir';
+    margin: 0;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2{
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@include tablet {
+    h1 {
+        font-size: 36px;
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    &__content {
+        @include desktop {
+            display: flex;
+            padding: 0 $desktop-padding;
+            box-sizing: border-box;
+        }
+        &-texts {
+            display: flex;
+            flex-direction: column;
+            @include desktop {
+                min-width: 588px;
+                width: 90%;
+                border-right: 1px solid $silver;
+                margin-right: 24px;
+                margin-top: 40px;
+            }
+        }
+    }
+}

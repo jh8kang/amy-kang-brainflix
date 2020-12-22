@@ -3,23 +3,17 @@ import './Comments.scss';
 import Comment from '../Comment/Comment';
 import CommentForm from '../CommentForm/CommentForm';
 import { v4 as uuid } from 'uuid';
-import {reverseFirstThreeFunc} from '../../modules/reverseFirstThreeFunc';
 
-// function reverseFirstThree(ls) {
-//     let firstThree = ls.splice(0, 3);
-//     let restofArray = ls;
-//     firstThree.reverse();
-//     let finalArray = firstThree.concat(restofArray);
-//     return finalArray;
-// }
 
 function Comments({currentVideo, submitHandler}){
-    let reversedComments = currentVideo.comments.slice().reverse()
-    let newComments = reverseFirstThreeFunc(reversedComments);
-    // console.log(newComments)
-    // console.log(reversedComments)
+    let currentComments = currentVideo.comments;
+    let firstThree = currentComments.slice(0, 3)
+    let restOfComments = currentComments.slice(3)
+    let firstThreeReversed = firstThree.slice().reverse();
+    let concatComments = firstThreeReversed.concat(restOfComments)
+    let reversedComments = concatComments.slice().reverse()
 
-    
+    // console.log(currentVideo)
         return (
             <div className="comments" >
                 <h2 className="comments__title">3 Comments</h2>
