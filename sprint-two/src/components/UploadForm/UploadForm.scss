@@ -20,6 +20,10 @@
             padding:10px;
             margin-bottom: 24px;
             border: 1px solid $mercury;   
+            &:focus {
+                outline: none;
+                border: 1px solid $brainflix-blue; 
+            }
         }
     }
     &__description {
@@ -33,6 +37,10 @@
             @include tablet {
                 margin-bottom: 40px;
                 border-bottom: 1px solid $mercury;
+            }
+            &:focus {
+                outline: none;
+                border: 1px solid $brainflix-blue; 
             }
         }
     }

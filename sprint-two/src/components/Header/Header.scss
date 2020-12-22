@@ -46,6 +46,10 @@
             margin-right: 24px;
             width: 65%;
         }
+        &:focus {
+            outline: none;
+            border: 1px solid $brainflix-blue; 
+        }
         &-logo {
             position: absolute;
             left: 10px;

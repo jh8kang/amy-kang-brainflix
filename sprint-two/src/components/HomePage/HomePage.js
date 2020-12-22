@@ -45,7 +45,7 @@ class HomePage extends Component {
         commentForm.reset();
     }
   
-    componentDidMount() {
+    componentDidMount(event) {
         axios
             .get(url + firstVideoId + apiKey)
             .then(res=> {
