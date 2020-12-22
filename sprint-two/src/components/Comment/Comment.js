@@ -1,17 +1,16 @@
 import './Comment.scss';
 
+// realTime takes in a number in millisec and returns a string with date 
 function realTime (timestamp) {
     let time = new Date(timestamp)
     let timeString = time.toLocaleString();
-    let justDate = timeString.slice(0, 10)
-    return justDate;
+    let readableDate = timeString.slice(0, 10)
+    return readableDate;
 }
 
-// Comment component takes in props and returns JXN for a single comment 
+// COMMENT Component returns a comment from MainVideo
 function Comment({name, timestamp, comment, id}) {
-
     let newTime = realTime(timestamp)
-    // console.log(newTime)
     return (
         <div className="comment" key={id} >
             <div className="comment__img"></div>

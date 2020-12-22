@@ -3,9 +3,8 @@ import play from '../../assets/Icons/SVG/play.svg';
 import fullscreen from '../../assets/Icons/SVG/fullscreen.svg';
 import volume from '../../assets/Icons/SVG/volume.svg';
 
+// MAINVIDEO component returns JSX for the main video
 function MainVideo(props) {
-    
-    
     return (
         <section className="video">
             <video className ="video__img" poster={props.currentVideo.image}></video>

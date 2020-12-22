@@ -1,7 +1,7 @@
 import './NextVideos.scss';
 import {Link} from 'react-router-dom'
 
-// Video takes in props and returns JSX 
+// Video returns JSX for the specified video
 function Video(props) {
     return (
         <Link className="video__link" to={`/${props.id}`}>
@@ -16,7 +16,7 @@ function Video(props) {
     )
 }
 
-// NextVideos takes in props and returns JSX for each video
+// NextVideos Component returns JSX for each video
 function NextVideos(props) {
     return (
         <div className="videos">

@@ -1,7 +1,8 @@
-import React from 'react';
 import './UploadForm.scss';
+import React from 'react';
 
-export default function UploadForm() {
+// UploadForm Component returns JSX for the form on upload page
+function UploadForm() {
     return (
             <form className="upload-form">
                 <label className="upload-form__title" htmlFor="videoTitle">TITLE YOUR VIDEO</label>
@@ -15,3 +16,5 @@ export default function UploadForm() {
             </form>
     )
 }
+
+export default UploadForm

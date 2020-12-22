@@ -2,7 +2,9 @@ import React from 'react';
 import './UploadVideo.scss';
 import uploadImg from '../../assets/Images/Upload-video-preview.jpg';
 
-export default function UploadVideo() {
+
+// UploadVideo returns JSX for the thumnail on the upload page
+function UploadVideo() {
     return (
         <div className="thumnail">
             <h2 className="thumnail__title">VIDEO THUMNAIL</h2>
@@ -10,3 +12,5 @@ export default function UploadVideo() {
         </div>
     )
 }
+
+export default UploadVideo

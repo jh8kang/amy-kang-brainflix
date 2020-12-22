@@ -2,13 +2,15 @@ import './Content.scss';
 import viewsLogo from '../../assets/Icons/SVG/views.svg';
 import likesLogo from '../../assets/Icons/SVG/likes.svg';
 
+// realTime takes in a number in millisec and returns a string with date 
 function realTime (timestamp) {
     let time = new Date(timestamp)
     let timeString = time.toLocaleString();
-    let justDate = timeString.slice(0, 10)
-    return justDate;
+    let readableDate = timeString.slice(0, 10)
+    return readableDate;
 }
 
+// CONTENT Component returns JSX of the main video contents 
 function Content(props) {
     return (
         <div className="title__bar">
