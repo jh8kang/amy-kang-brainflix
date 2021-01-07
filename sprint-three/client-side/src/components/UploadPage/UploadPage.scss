@@ -1,0 +1,22 @@
+@import '../../partials/_global';
+* {
+    font-family: 'Avenir';
+}
+
+h1 {
+    font-weight:bold;
+    font-style: normal; 
+}
+
+.upload {
+    padding: 24px $mobile-padding 0 $mobile-padding;
+    border-top: 1px solid $mercury;
+    &__title {
+        padding-bottom: 32px;
+    }
+    &__content {
+        @include  desktop {
+            display: flex;
+        }
+    }
+}

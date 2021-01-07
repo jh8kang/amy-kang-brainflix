@@ -1,0 +1,51 @@
+@import '../../partials/_global';
+
+.comment {
+    display: flex;
+    padding: 24px 0 16px 0;
+    border-bottom: 1px solid $mercury;
+    &__img {
+        width: 47px;
+        height: 47px;
+        background-color: $mercury;
+        border: none;
+        border-radius: 50%;
+        margin-right: 16px;
+        box-sizing: border-box;
+    }
+    &__data {
+        width: 80%;
+        &-info {
+            display: flex; 
+            justify-content: space-between;
+            @include tablet {
+                justify-content: flex-start;
+            }
+            &-name {
+                text-align: start;
+                font-size: 14px;
+                padding-bottom: 8px;
+                font-weight: 500;
+                font-style: normal;
+                @include tablet {
+                    margin-right: 8px;
+                    font-size: 15px;
+                }
+            }
+            &-time {
+                font-size: 13px;
+                color: $silver;
+                @include tablet {
+                    font-size: 14px;
+                }
+            }
+        }
+        &-comment {
+            text-align: start;
+            font-size: 13px;
+            @include tablet {
+                font-size: 14px;
+            }
+        }
+    }
+}
