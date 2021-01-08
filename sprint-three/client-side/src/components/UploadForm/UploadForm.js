@@ -1,10 +1,16 @@
 import './UploadForm.scss';
 import React from 'react';
+import uploadImg from '../../assets/Images/Upload-video-preview.jpg';
 
 // UploadForm Component returns JSX for the form on upload page
-function UploadForm() {
+function UploadForm(props) {
     return (
-            <form className="upload-form">
+            <form className="upload-form" onSubmit={e=> props.submitHandler(e)} >
+                <div className="thumnail">
+                    <h2 className="thumnail__title">VIDEO THUMNAIL</h2>
+                    <img alt="bike handle"className="thumnail__video" src={uploadImg}/>
+                </div>
+
                 <label className="upload-form__title" htmlFor="videoTitle">TITLE YOUR VIDEO</label>
                 <input className="upload-form__title-input"id="videoTitle" type="text" placeholder="Add a title to your video"/>
                 <label className="upload-form__description" htmlFor="videoDescription">ADD A VIDEO DESCRIPTION</label>

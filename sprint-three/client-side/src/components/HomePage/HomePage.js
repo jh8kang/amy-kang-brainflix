@@ -47,7 +47,7 @@ class HomePage extends Component {
   
     componentDidMount(event) {
         axios
-            .get(url + firstVideoId + apiKey)
+            .get('http://localhost:8000/videos/' + firstVideoId)
             .then(res=> {
                 this.setState({
                     currentVideo: res.data,
@@ -55,7 +55,7 @@ class HomePage extends Component {
             })
             .catch((err)=>console.log("error:", err))
         axios
-            .get(url + apiKey)
+            .get('http://localhost:8000/videos')
             .then(res => {
                 let filteredList = res.data.filter((video)=>video.id !== this.state.currentVideo.id)
                 this.setState({
@@ -71,7 +71,7 @@ class HomePage extends Component {
         if (typeof match.params.videoId !== 'undefined') {
             if (match.params.videoId !== this.state.currentVideo.id) {
                 axios
-                    .get(url + match.params.videoId + apiKey)
+                    .get('http://localhost:8000/videos/'+ match.params.videoId)
                     .then(res=> {
                         this.setState({
                             currentVideo: res.data,
@@ -79,15 +79,13 @@ class HomePage extends Component {
                     })
                     .catch(err => console.log(err))
                 axios
-                    .get(url + apiKey)
+                    .get('http://localhost:8000/videos/')
                     .then(res => {
                         let filteredList = res.data.filter((video)=> (video.id !== this.state.currentVideo.id))
                         this.setState({
                             videoList: filteredList
                         })
                     })
-                    
-
             } 
         } 
     }

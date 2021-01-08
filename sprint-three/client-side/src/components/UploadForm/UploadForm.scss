@@ -78,3 +78,26 @@
 
     }
 }
+
+.thumnail {
+    padding-bottom: 32px;
+    @include tablet {
+        padding-bottom: 40px;
+    }
+    &__title {
+        @include silver-sub;
+        padding-bottom: 5px;
+        @include tablet {
+            font-size: 16px;
+        }
+    }
+    &__video {
+        width: 100%;
+        height: 46vw;
+        border-radius: 4px;
+        @include tablet {
+            width: 344px;
+            height: 183px;
+        }
+    }
+}

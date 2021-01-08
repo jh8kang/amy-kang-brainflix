@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
-import HomePage from './components/HomeP age/HomePage';
+import HomePage from './components/HomePage/HomePage';
 import UploadPage from './components/UploadPage/UploadPage'
 import Header from './components/Header/Header';
 
