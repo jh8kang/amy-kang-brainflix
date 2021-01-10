@@ -27,7 +27,7 @@ class HomePage extends Component {
     }
 
     likeHandler(e, currentVideo) {
-        if (this.state.likeToggle == false) {
+        if (this.state.likeToggle === false) {
             axios.post('http://localhost:8000/videos/' + currentVideo.id + '/likes')
             .then(res => {
                 this.setState({
@@ -37,7 +37,7 @@ class HomePage extends Component {
             this.setState({
                 likeToggle: true
             })
-        } else if (this.state.likeToggle == true) {
+        } else if (this.state.likeToggle ===true) {
             axios.post('http://localhost:8000/videos/' + currentVideo.id + '/likes/delete')
             .then(res => {
                 this.setState({
