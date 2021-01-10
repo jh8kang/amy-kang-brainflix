@@ -20,7 +20,7 @@ class HomePage extends Component {
             currentVideo: {comments: [{comment: ""}]},
             videoList: [], 
             likeToggle: false,
-            playing: false
+            
           } 
         this.submitHandler = this.submitHandler.bind(this);
         this.likeHandler = this.likeHandler.bind(this);
