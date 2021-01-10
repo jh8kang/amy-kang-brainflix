@@ -1,7 +1,7 @@
 import React from 'react'
 import './UploadPage.scss';
 import UploadForm from '../../components/UploadForm/UploadForm';
-import UploadVideo from '../../components/UploadVideo/UploadVideo';
+// import UploadVideo from '../../components/UploadVideo/UploadVideo';
 import {v4 as uuid} from 'uuid';
 import uploadImg from '../../assets/Images/Upload-video-preview.jpg';
 import axios from 'axios';
@@ -46,10 +46,9 @@ class UploadPage extends React.Component {
             ]
         }
         axios.post('http://localhost:8000/videos', newVideo)
-        .then(res => {
-            console.log(res)
+        .catch(err => {
+            console.log(err)
         })
-        
     }
     render() {
         return (

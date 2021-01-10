@@ -4,7 +4,15 @@ import './Comment.scss';
 function realTime (timestamp) {
     let time = new Date(timestamp)
     let timeString = time.toLocaleString();
-    let readableDate = timeString.slice(0, 10)
+    let readableDate;
+
+    if (timeString[1] === '/' && timeString[3] === '/') {
+        readableDate = timeString.slice(0, 8)
+    } else if(timeString[4] === '/') {
+        readableDate = timeString.slice(0, 9)
+    } else {
+        readableDate = timeString.slice(0, 10)
+    }
     return readableDate;
 }
 

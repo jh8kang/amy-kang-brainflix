@@ -5,12 +5,12 @@ import MainVideo from '../MainVideo/MainVideo'
 import NextVideos from '../NextVideos/NextVideos'
 import Comments from '../Comments/Comments';
 import Content from '../Content/Content';
+import {v4 as uuid} from 'uuid'
 
 
 // Variables 
 let firstVideoId = '1af0jruup5gu';
-let apiKey = '?api_key=c4f92712-c6b3-47a0-abb5-1c487b16a781';
-let url ='https://project-2-api.herokuapp.com/videos/';
+
 
 // HomePage is a statefull component that contains life cycle methods and returns JSX for the Home Page 
 class HomePage extends Component {
@@ -19,23 +19,54 @@ class HomePage extends Component {
         this.state = {
             currentVideo: {comments: [{comment: ""}]},
             videoList: [], 
+            likeToggle: false,
+            playing: false
           } 
         this.submitHandler = this.submitHandler.bind(this);
+        this.likeHandler = this.likeHandler.bind(this);
+    }
+
+    likeHandler(e, currentVideo) {
+        if (this.state.likeToggle == false) {
+            axios.post('http://localhost:8000/videos/' + currentVideo.id + '/likes')
+            .then(res => {
+                this.setState({
+                    currentVideo: res.data
+                })
+            })
+            this.setState({
+                likeToggle: true
+            })
+        } else if (this.state.likeToggle == true) {
+            axios.post('http://localhost:8000/videos/' + currentVideo.id + '/likes/delete')
+            .then(res => {
+                this.setState({
+                    currentVideo: res.data
+                })
+            })
+            this.setState({
+                likeToggle: false
+            })
+        }
     }
 
     submitHandler(e, currentVideoId) {
         e.preventDefault();
         let newComment = {
             name: "BrainFlix User",
-            comment: e.target.commentInput.value
+            comment: e.target.commentInput.value,
+            id: uuid(),
+            videoid: currentVideoId, 
+            likes: 0, 
+            timestamp: Date.now()
         }
         axios
-            .post((url + currentVideoId + '/comments' + apiKey), newComment)
+            .post(('http://localhost:8000/comments/' + currentVideoId), newComment)
             .then(res=> {
                 let currentVideoState = this.state.currentVideo; 
-                let videoNewComments = this.state.currentVideo.comments;
-                videoNewComments.push(res.data);
-                currentVideoState.comments = videoNewComments;
+                let videoComments = this.state.currentVideo.comments;
+                videoComments.push(res.data);
+                currentVideoState.comments = videoComments;
                 this.setState({
                     currentVideo: currentVideoState,
                 })
@@ -96,7 +127,7 @@ class HomePage extends Component {
                 <MainVideo currentVideo = {this.state.currentVideo} />
                 <div className="main__content">
                     <div className = "main__content-texts">
-                        <Content currentVideo = {this.state.currentVideo}/>
+                        <Content currentVideo = {this.state.currentVideo} likeHandler={this.likeHandler}/>
                         <Comments submitHandler={this.submitHandler} currentVideo={this.state.currentVideo} />
                     </div>
                     <NextVideos videoList={this.state.videoList} />

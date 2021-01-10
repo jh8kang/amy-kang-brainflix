@@ -23,7 +23,7 @@ function Content(props) {
                 <div className="title__data">
                     <img alt="eye" src={viewsLogo}></img>
                     <p className="title__data-views">{props.currentVideo.views}</p>
-                    <img alt="heart" src={likesLogo}></img>
+                    <button onClick={e=> props.likeHandler(e, props.currentVideo)} className="title__data-button"><img alt="heart" src={likesLogo}></img></button>
                     <p className="title__data-likes">{props.currentVideo.likes}</p>
                 </div>
             </div>

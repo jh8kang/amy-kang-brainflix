@@ -69,6 +69,11 @@
                 padding-right: 32px;
             }
         }
+        &-button {
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
     }
     &__article {
         font-size: 14px;
