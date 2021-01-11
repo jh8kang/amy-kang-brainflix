@@ -17,20 +17,19 @@ class MainVideo extends React.Component {
         this.tick = this.tick.bind(this)
         
     }
-    
-    componentDidMount() {
-        setInterval(this.tick, 1000)
-    }
 
     tick() {
         this.setState({timer: this.state.timer + 1})
+    }
+
+    componentDidMount() {
+        setInterval(this.tick, 1000)
     }
 
     addTimerEvent() {
         this.setState({
             timingEvents: [...this.state.timingEvents, new Date()], 
         })
-
     }
     render() {
         return (

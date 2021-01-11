@@ -11,7 +11,6 @@ import {v4 as uuid} from 'uuid'
 // Variables 
 let firstVideoId = '1af0jruup5gu';
 
-
 // HomePage is a statefull component that contains life cycle methods and returns JSX for the Home Page 
 class HomePage extends Component {
     constructor(){
