@@ -15,6 +15,10 @@ class MainVideo extends React.Component {
         }
         this.addTimerEvent = this.addTimerEvent.bind(this)
         this.tick = this.tick.bind(this)
+        
+    }
+    
+    componentDidMount() {
         setInterval(this.tick, 1000)
     }
 
@@ -36,7 +40,7 @@ class MainVideo extends React.Component {
                     <VideoButton addTimerEvent = {this.addTimerEvent} timingEvents={this.state.timingEvents}/>
                     <div className="video__scrubby">
                         <div className="video__scrubby-bar"></div>
-                        <ElapsedTime  timingEvents={this.state.timingEvents}/>
+                        <ElapsedTime  timingEvents={this.state.timingEvents} currentVideo={this.props.currentVideo}/>
                     </div>
                     <div className="video__control">
                         <img alt="fullscreen button"src={fullscreen} className="video__control-size"></img>

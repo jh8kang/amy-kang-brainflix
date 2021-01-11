@@ -1,7 +1,5 @@
 import React from 'react'
 import './UploadPage.scss';
-import UploadForm from '../../components/UploadForm/UploadForm';
-// import UploadVideo from '../../components/UploadVideo/UploadVideo';
 import {v4 as uuid} from 'uuid';
 import uploadImg from '../../assets/Images/Upload-video-preview.jpg';
 import axios from 'axios';
@@ -55,8 +53,20 @@ class UploadPage extends React.Component {
             <div className="upload">
                 <h1 className="upload__title">Upload Video</h1>
                 <div className="upload__content">
-                    {/* <UploadVideo/> */}
-                    <UploadForm submitHandler={this.submitHandler} />
+                    <form className="upload-form" onSubmit={e=> this.submitHandler(e)} >
+                        <div className="thumnail">
+                            <h2 className="thumnail__title">VIDEO THUMNAIL</h2>
+                            <img alt="bike handle"className="thumnail__video" src={uploadImg}/>
+                        </div>
+                        <label className="upload-form__title" htmlFor="videoTitle">TITLE YOUR VIDEO</label>
+                        <input className="upload-form__title-input"id="videoTitle" type="text" placeholder="Add a title to your video"/>
+                        <label className="upload-form__description" htmlFor="videoDescription">ADD A VIDEO DESCRIPTION</label>
+                        <textarea className="upload-form__description-input" id="videoDescription"name="videoDescription" placeholder="Add a description of your video" />
+                        <div className="upload-form__buttons">   
+                            <button className="upload-form__buttons-publish">PUBLISH</button>
+                            <button className="upload-form__buttons-cancel">CANCEL</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         )

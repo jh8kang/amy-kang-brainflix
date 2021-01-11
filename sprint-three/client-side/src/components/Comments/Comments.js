@@ -12,10 +12,11 @@ function Comments({currentVideo, submitHandler}){
     let firstThreeReversed = firstThree.slice().reverse();
     let concatComments = firstThreeReversed.concat(restOfComments)
     let reversedComments = concatComments.slice().reverse()
+    let commentsCount = currentVideo.comments.length;
 
         return (
             <div className="comments" >
-                <h2 className="comments__title">3 Comments</h2>
+                <h2 className="comments__title">{commentsCount} Comments</h2>
                 <CommentForm currentVideo={currentVideo} submitHandler={submitHandler} />
                 {reversedComments.map((comment)=>{return <Comment key={uuid()}  id ={comment.id}  name={comment.name} timestamp={comment.timestamp} comment={comment.comment}/>})}
             </div>
