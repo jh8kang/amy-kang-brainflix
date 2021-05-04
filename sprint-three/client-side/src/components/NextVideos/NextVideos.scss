@@ -36,6 +36,9 @@
         width: 120px;
         height: 70px;
         border-radius: 4px;
+        @include desktop {
+           min-width: 120px;
+        }
     }
     &-info {
         display: flex;

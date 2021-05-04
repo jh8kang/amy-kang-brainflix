@@ -45,6 +45,7 @@
                 margin-bottom: 16px;
                 outline: none;
                 border: 1px solid $mercury;
+                resize: none;
                 &:focus {
                     border: 1px solid $brainflix-blue;
                 }

@@ -6,6 +6,7 @@ import NextVideos from '../NextVideos/NextVideos'
 import Comments from '../Comments/Comments';
 import Content from '../Content/Content';
 import {v4 as uuid} from 'uuid'
+import { withRouter } from "react-router-dom";
 
 
 // Variables 
@@ -98,6 +99,13 @@ class HomePage extends Component {
 
     componentDidUpdate(prevProps, prevState) {
         const {match} = this.props
+        if (
+            this.props.location.pathname !== prevProps.location.pathname
+          ) {
+            window.scrollTo(0, 0);
+          }
+
+
         if (typeof match.params.videoId !== 'undefined') {
             if (match.params.videoId !== this.state.currentVideo.id) {
                 axios
